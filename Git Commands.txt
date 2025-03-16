@@ -1,0 +1,45 @@
+Git commands
+
+	git config --list  : Gives details of user (username and email ID)
+	
+	git config --global user.name "username"
+	git config --global user.email "email@gmail.com"
+	
+	
+Actual Git commands
+
+	git init								:	It initializes a .git (hidden file) in our local folder
+
+	git add filename.txt					:	To add files to the staging area
+	git add .								:	To add all files to the staging area
+	
+	git status								:	To check the status of files (Tracked ? Untracked)
+	
+	git commit -m "Message"					:	To commit the changes with a message
+	
+	git reset HEAD~							:	To uncommit the last commit
+	
+	git log									:	To get details of our commits
+	
+	git log --oneline						:	To get our commit details in a single line
+	
+	git branch								:	To get the current branch (usually master)
+	
+	git branch -m xyz						:	To rename our branch to xyz 
+	
+	git commit -m "Modified Message" --amend:	To update the last commit 
+	
+	git remote add origin "url-remote repo" :	To link remote repository to local folder containing .git
+	
+	git remote -v							:	To check the remote repository linked to local folder
+	
+	git remote remove origin				:	To unlink remote repository and local folder
+	
+	git push -u origin main					:	To push commits for the first time to remote repo
+	git push								:	To push commits from the second time
+	
+	
+	
+	
+	
+	
