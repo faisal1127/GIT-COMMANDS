@@ -38,6 +38,44 @@ Actual Git commands
 	git push -u origin main					:	To push commits for the first time to remote repo
 	git push								:	To push commits from the second time
 	
+	git clone "url-remote repo"	`			:	To clone remote project to local folder
+	
+Branches
+
+	git branch								:	To get the info of all local branches
+	
+	git branch "branch-name"				:	To create a new branch
+	
+	git branch -m "Modified branch-name"	:	To rename current branch 
+	
+	git checkout "branch-name"				:	To move to a specific branch
+	git switch "branch-name"				:	To move to a specific branch
+	
+	git chechout -b "new branch-name"		:	To create & move to a new branch
+	git switch   -c "new branch-name"		:	To create & move to a new branch
+	
+	git branch -d "branch-name"				:	To delete a branch (Not to be present in branch to be deleted)
+	git branch -D "branch-name"				:	To force delete a branch (Not to be present in branch to be deleted)
+	
+	git push -u origin "branch-name"		:	To push a new branch to remote repository (initial)
+	
+Then, create a pull request to merge the changes in the new branch to the main branch
+
+	git fetch --all							:	To get all remote content into local folder
+	git checkout "branch-name"				:	To move to specific branch
+	git pull origin "branch-name"			:	To merge all remote changes and be up to date
+	
+							fetch		:	Gets all remote content into local folder but it doesn't merge
+							pull		:	fetch + merge
+							push		:	Send all the local changes to remote repository
+							
+	
+	
+	
+	
+	
+	
+
 	
 	
 	
