@@ -69,7 +69,56 @@ Then, create a pull request to merge the changes in the new branch to the main b
 							pull		:	fetch + merge
 							push		:	Send all the local changes to remote repository
 							
+Rebasing 
+
+	git pull origin main
 	
+	git checkout -b "new branch-name"
+	Make few commits, 
+	
+	Mean while, another developer using same main branch creates a new feature branch and pushes it to
+	remote repository, raises PR and merges it to the remote main branch
+	
+	Now, for you to push, you need to rebase your new branch to the new main branch head
+	
+	git chechout main
+	git pull origin main
+	git checkout "new branch-name"
+	git rebase main
+	
+	Here, merge conflicts can occur if both the developers are working on the same files
+	We need to manually resolve the conflicts
+	
+	git add .
+	git rebase --continue
+	vim editor opens , add a commit message and exit vim editor using esc:wq commands
+	git push origin "new branch-name"
+	
+	raise a PR to merge it to merge the new branch to the remote main branch
+	
+cherry-pick
+	
+	when we need to push similar commits on different branches, Here, without 
+	manually changing files on other branch we can use cherry-pick to copy the commits on specific branch
+	
+	git cherry-pick "commit-id"
+	
+stash
+	
+	Suppose you are working on 20 files, suddenly you need to stop working on these files and work on a new feature
+	There are two ways to tackle this situation,
+	1) Make a commit for the current changes in files and use it later
+	2) stash (Temporary storage) them
+	
+	git stash list 							:	To get list of all changes saved
+	git stash save 							:	To save the current changes 
+	git stash apply							:	To get back the saved changes
+	git stash pop							:	To get & remove the saved changes from stash list
+	
+	
+
+
+
 	
 	
 	
